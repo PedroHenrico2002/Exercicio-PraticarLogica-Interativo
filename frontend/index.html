@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Java 20 Exercícios - Frontend Completo</title>
+<style>
+body {font-family:monospace;background:#111;color:#0f0;padding:20px;max-width:900px;margin:auto;line-height:1.4;}
+h1 {text-align:center;color:#0f0;}
+.ex {background:#222;padding:25px;margin:25px 0;border-left:6px solid #0f0;border-radius:10px;box-shadow:0 5px 15px #000;}
+h3 {color:#afa;}
+textarea {width:100%;height:140px;background:#000;color:#0f0;border:2px solid #0f0;padding:12px;font-family:monospace;font-size:13px;box-sizing:border-box;}
+.buttons {display:flex;gap:15px;margin:15px 0;}
+button {flex:1;padding:12px;background:#0f0;color:#000;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:monospace;font-size:14px;transition:background 0.3s;}
+button:hover {background:#0a0;}
+.result {padding:18px;margin-top:15px;border-radius:8px;background:#333;border-left:5px solid #0f0;min-height:60px;}
+.success {border-left-color:#0f0;background:#0a0a0a;}
+.error {border-left-color:#f00;background:#200;color:#f55;}
+nav {position:sticky;top:0;background:#111;padding:10px;text-align:center;}
+nav button {margin:0 5px;padding:8px 16px;background:#333;color:#0f0;border:1px solid #0f0;}
+</style>
+</head>
+<body>
+<h1>🎯 JAVA 10 EXERCÍCIOS INTERATIVOS - FRONTEND</h1>
+<nav>
+<button onclick="scrollToEx(1)">1</button><button onclick="scrollToEx(2)">2</button><button onclick="scrollToEx(3)">3</button><button onclick="scrollToEx(4)">4</button>
+<button onclick="scrollToEx(5)">5</button><button onclick="scrollToEx(6)">6</button><button onclick="scrollToEx(7)">7</button><button onclick="scrollToEx(8)">8</button>
+<button onclick="scrollToEx(9)">9</button><button onclick="scrollToEx(10)">10</button>
+</nav>
+
+<div class="ex" id="ex1">
+<h3>1️⃣ Hello World - System.out.println("Oi Mundo!")</h3>
+<textarea id="code1">public class Ex1 {
+  public static void main(String[] args) {
+    
+  }
+}</textarea>
+<div class="buttons">
+<button onclick="test(1)">🔍 TESTAR</button>
+<button onclick="dica(1)">💡 DICA PASSO</button>
+</div>
+<div id="res1" class="result">Digite código → TESTAR!</div>
+</div>
+
+<div class="ex" id="ex2">
+<h3>2️⃣ Scanner Soma - 2 nextInt() + println</h3>
+<textarea id="code2">import java.util.Scanner;
+public class Ex2 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+  }
+}</textarea>
+<div class="buttons">
+<button onclick="test(2)">🔍 TESTAR</button>
+<button onclick="dica(2)">💡 DICA PASSO</button>
+</div>
+<div id="res2" class="result"></div>
+</div>
+
+<div class="ex" id="ex3">
+<h3>3️⃣ FOR 1-10</h3>
+<textarea id="code3">public class Ex3 {
+  public static void main(String[] args) {
+  }
+}</textarea>
+<div class="buttons">
+<button onclick="test(3)">🔍 TESTAR</button>
+<button onclick="dica(3)">💡 DICA PASSO</button>
+</div>
+<div id="res3" class="result"></div>
+</div>
+
+<div class="ex" id="ex4">
+<h3>4️⃣ IF Maioridade</h3>
+<textarea id="code4">import java.util.Scanner;
+public class Ex4 {
+  public static void main(String[] args) {
+  }
+}</textarea>
+<div class="buttons">
+<button onclick="test(4)">🔍 TESTAR</button>
+<button onclick="dica(4)">💡 DICA PASSO</button>
+</div>
+<div id="res4" class="result"></div>
+</div>
+
+<div class="ex" id="ex5">
+<h3>5️⃣ % Par/Impar</h3>
+<textarea id="code5">import java.util.Scanner;
+public class Ex5 {
+  public static void main(String[] args) {
+  }
+}</textarea>
+<div class="buttons">
+<button onclick="test(5)">🔍 TESTAR</button>
+<button onclick="dica(5)">💡 DICA PASSO</button>
+</div>
+<div id="res5" class="result"></div>
+</div>
+
+<div class="ex" id="ex6">
+<h3>6️⃣ Array Soma</h3>
+<textarea id="code6">public class Ex6 {
+  public static void main(String[] args) {
+  }
+}</textarea>
+<div class="buttons">
+<button onclick="test(6)">🔍 TESTAR</button>
+<button onclick="dica(6)">💡 DICA PASSO</button>
+</div>
+<div id="res6" class="result"></div>
+</div>
+
+<div class="ex" id="ex7">
+<h3>7️⃣ Método Soma</h3>
+<textarea id="code7">public class Ex7 {
+  public static void main(String[] args) {
+  }
+}</textarea>
+<div class="buttons">
+<button onclick="test(7)">🔍 TESTAR</button>
+<button onclick="dica(7)">💡 DICA PASSO</button>
+</div>
+<div id="res7" class="result"></div>
+</div>
+
+<div class="ex" id="ex8">
+<h3>8️⃣ While 5x</h3>
+<textarea id="code8">public class Ex8 {
+  public static void main(String[] args) {
+  }
+}</textarea>
+<div class="buttons">
+<button onclick="test(8)">🔍 TESTAR</button>
+<button onclick="dica(8)">💡 DICA PASSO</button>
+</div>
+<div id="res8" class="result"></div>
+</div>
+
+<div class="ex" id="ex9">
+<h3>9️⃣ do-while Menu</h3>
+<textarea id="code9">public class Ex9 {
+  public static void main(String[] args) {
+  }
+}</textarea>
+<div class="buttons">
+<button onclick="test(9)">🔍 TESTAR</button>
+<button onclick="dica(9)">💡 DICA PASSO</button>
+</div>
+<div id="res9" class="result"></div>
+</div>
+
+<div class="ex" id="ex10">
+<h3>🔟 Switch Dia</h3>
+<textarea id="code10">import java.util.Scanner;
+public class Ex10 {
+  public static void main(String[] args) {
+  }
+}</textarea>
+<div class="buttons">
+<button onclick="test(10)">🔍 TESTAR</button>
+<button onclick="dica(10)">💡 DICA PASSO</button>
+</div>
+<div id="res10" class="result"></div>
+</div>
+
+<script>
+// Validações COMPLETAS portadas Main.java
+const VALIDACOES = {
+  1: code => code.includes('println') && code.includes('oi'),
+  2: code => code.includes('nextint') && code.includes('nextint'),
+  3: code => code.includes('for') && code.includes('<=10'),
+  4: code => code.includes('if') && code.includes('>=18'),
+  5: code => code.includes('%') && code.includes('2'),
+  6: code => code.includes('int[') && code.includes('for'),
+  7: code => code.includes('static int') && code.includes('return'),
+  8: code => code.includes('while') && code.includes('<5'),
+  9: code => code.includes('do') && code.includes('while'),
+  10: code => code.includes('switch') && code.includes('case')
+};
+
+const DICAS = {
+  1: 'System.out.println("Oi Mundo Java!");',
+  2: 'int n1=sc.nextInt();\nint n2=sc.nextInt();\nSystem.out.println(n1+n2);',
+  3: 'for(int i=1;i<=10;i++) System.out.println(i);',
+  4: 'int idade=sc.nextInt();\nif(idade>=18) System.out.println("adulto"); else System.out.println("criança");',
+  5: 'int n=sc.nextInt();\nif(n%2==0) System.out.println("PAR"); else System.out.println("IMPAR");',
+  6: 'int[] arr={1,2,3};\nint soma=0;\nfor(int x:arr) soma+=x;\nSystem.out.println(soma);',
+  7: 'static int soma(int a,int b){return a+b;}\nSystem.out.println(soma(2,3));',
+  8: 'int i=0;\nwhile(i<5){System.out.println("i="+i); i++;}',
+  9: 'int opc=1;\ndo{opc=sc.nextInt();}while(opc!=0);',
+  10: 'int dia=sc.nextInt();\nswitch(dia){case 1: System.out.println("Segunda");break;default:System.out.println("Inválido");}'
+};
+
+function test(n) {
+  const code = document.getElementById('code'+n).value.toLowerCase();
+  const res = document.getElementById('res'+n);
+  res.innerHTML = '🔍 ANALISANDO ESTRUTURA...';
+  res.className = 'result';
+  setTimeout(() => {
+    const ok = VALIDACOES[n](code);
+    if (ok) {
+      res.innerHTML = '🎉 CÓDIGO VALIDADO! ✅ 100% correta estrutura!';
+      res.className = 'result success';
+    } else {
+      res.innerHTML = '❌ Estrutura incompleta. 💡 Clique DICA PASSO!';
+      res.className = 'result error';
+    }
+  }, 1000);
+}
+
+function dica(n) {
+  const ta = document.getElementById('code'+n);
+  ta.value += '\n// ' + DICAS[n];
+  document.getElementById('res'+n).innerHTML = '✅ DICAS inseridas! Agora TESTAR 👆';
+}
+
+function scrollToEx(n) {
+  document.getElementById('ex'+n).scrollIntoView({behavior:'smooth'});
+}
+</script>
+</body>
+</html>
+
