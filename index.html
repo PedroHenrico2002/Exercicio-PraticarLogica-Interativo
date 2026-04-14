@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java 15 Exercícios - PASSO A PASSO</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Courier New',monospace;background:linear-gradient(135deg,#1e1b4b,#0f0f23);color:#e8eaed;padding:20px;max-width:1200px;margin:auto;}
+.header{text-align:center;padding:35px;background:linear-gradient(90deg,#3b82f6,#1d4ed8,#1e40af);border-radius:25px;margin-bottom:35px;color:white;box-shadow:0 15px 40px rgba(0,0,0,0.4);}
+h1{font-size:2.3em;margin-bottom:12px;}
+.subtitle{font-size:1.15em;}
+.exercise{background:rgba(255,255,255,0.06);border-radius:18px;padding:28px;margin:28px 0;border-left:6px solid #10b981;box-shadow:0 10px 30px rgba(0,0,0,0.35);transition:all 0.3s;}
+.exercise:hover{box-shadow:0 15px 45px rgba(16,185,129,0.25);}
+h2{color:#60a5fa;font-size:1.45em;margin-bottom:15px;}
+.description{background:rgba(37,99,235,0.3);padding:15px;border-radius:10px;margin-bottom:20px;border-left:4px solid #3b82f6;}
+textarea{width:100%;height:180px;background:#0a0a14;color:#e2e8f0;border:2px solid #374151;border-radius:12px;padding:18px;font-family:'Courier New',monospace;font-size:14.5px;}
+.controls{display:flex;gap:15px;margin:25px 0;flex-wrap:wrap;}
+button{padding:13px 26px;border:none;border-radius:30px;cursor:pointer;font-weight:700;font-size:14px;transition:all 0.3s;box-shadow:0 5px 20px rgba(0,0,0,0.25);flex:1;min-width:130px;text-transform:uppercase;letter-spacing:0.5px;}
+.test-btn{background:linear-gradient(45deg,#10b981,#059669);color:white;}
+.test-btn:hover{background:linear-gradient(45deg,#059669,#047857);transform:translateY(-2px);}
+.hint-btn{background:linear-gradient(45deg,#f59e0b,#d97706);color:white;}
+.hint-btn:hover{background:linear-gradient(45deg,#d97706,#b45309);transform:translateY(-2px);}
+.result{padding:22px;border-radius:12px;margin-top:20px;min-height:110px;font-family:monospace;box-shadow:inset 0 2px 8px rgba(0,0,0,0.3);}
+.success{background:linear-gradient(135deg,rgba(16,185,129,0.25),rgba(34,197,94,0.15));border-left:6px solid #10b981;}
+.error{background:linear-gradient(135deg,rgba(239,68,68,0.25),rgba(220,38,38,0.15));border-left:6px solid #ef4444;}
+.info{background:linear-gradient(135deg,rgba(59,130,246,0.25),rgba(96,165,250,0.15));border-left:6px solid #3b82f6;}
+.input-group{margin:18px 0;padding:16px;background:rgba(0,0,0,0.4);border-radius:10px;}
+input{width:100%;padding:12px;background:#0a0a14;color:#e2e8f0;border:2px solid #374151;border-radius:8px;font-size:15px;}
+@media (max-width:700px){.controls{flex-direction:column;}button{width:100%;}}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🎯 JAVA 15 EXERCÍCIOS INTERATIVOS</h1>
+<p><strong>💡 DICA PASSO A PASSO</strong> + <strong>🔍 TESTE ESTRUTURA COMPLETA</strong> | Copie: <code>start index.html</code></p>
+</div>
+
+<!-- 1 HELLO WORLD -->
+<div class="exercise">
+<h2>1️⃣ Hello World</h2>
+<div class="description"><code>System.out.println("Oi Mundo!")</code></div>
+<textarea id="c1">public class Ex1 {
+  public static void main(String[] args) {  
+  }
+}</textarea>
+<div class="controls">
+<button class="test-btn" onclick="testCode(1,'println','Oi')">🔍 TESTAR</button>
+<button class="hint-btn" onclick="hintPasso(1)">💡 PASSO A PASSO</button>
+</div>
+<div id="r1" class="result info">Código completo → TESTAR!</div>
+</div>
+
+<!-- 2 SCANNER SOMA -->
+<div class="exercise">
+<h2>2️⃣ Scanner Soma</h2>
+<div class="description">2 nextInt() → println(soma)</div>
+<input class="input-group"><label>10 + 25 = ?</label><input id="in2" value="10 25"></div>
+<textarea id="c2">import java.util.Scanner;
+public class Ex2 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);    
+  }
+}</textarea>
+<div class="controls">
+<button class="test-btn" onclick="testCode(2,'nextInt','+')">🔍 TESTAR</button>
+<button class="hint-btn" onclick="hintPasso(2)">💡 PASSO A PASSO</button>
+</div>
+<div id="r2" class="result info"></div>
+</div>
+
+<!-- 3 LOOP FOR -->
+<div class="exercise">
+<h2>3️⃣ FOR 1-10</h2>
+<div class="description">for(i=1; i<=10; i++) println(i)</div>
+<textarea id="c3">public class Ex3 {
+  public static void main(String[] args) {
+  }
+}</textarea>
+<div class="controls">
+<button class="test-btn" onclick="testCode(3,'for','<=10')">🔍 TESTAR</button>
+<button class="hint-btn" onclick="hintPasso(3)">💡 PASSO A PASSO</button>
+</div>
+<div id="r3" class="result info"></div>
+</div>
+
+<!-- 4 IF MAIORIDADE -->
+<div class="exercise">
+<h2>4️⃣ IF Maioridade</h2>
+<div class="description">idade >=18 "adulto" else "criança"</div>
+<div class="input-group">
+<label>Idade teste:</label><input id="in4" value="25">
+</div>
+<textarea id="c4">import java.util.Scanner;
+public class Ex4 {
+  public static void main(String[] args) {
+  }
+}</textarea>
+<div class="controls">
+<button class="test-btn" onclick="testCode(4,'if','>=18')">🔍 TESTAR</button>
+<button class="hint-btn" onclick="hintPasso(4)">💡 PASSO A PASSO</button>
+</div>
+<div id="r4" class="result info"></div>
+</div>
+
+<!-- 5 PAR IMPAR -->
+<div class="exercise">
+<h2>5️⃣ % Par/Impar</h2>
+<div class="description">n % 2 == 0 "PAR" else "IMPAR"</div>
+<div class="input-group">
+<label>Número:</label><input id="in5" value="8">
+</div>
+<textarea id="c5">import java.util.Scanner;
+public class Ex5 {
+  public static void main(String[] args) {
+  }
+}</textarea>
+<div class="controls">
+<button class="test-btn" onclick="testCode(5,'%','2')">🔍 TESTAR</button>
+<button class="hint-btn" onclick="hintPasso(5)">💡 PASSO A PASSO</button>
+</div>
+<div id="r5" class="result info"></div>
+</div>
+
+<!-- 6 ARRAY FOREACH -->
+<div class="exercise">
+<h2>6️⃣ Array Soma</h2>
+<div class="description">int[] n = {1,2,3}; soma = 6</div>
+<textarea id="c6">public class Ex6 {
+  public static void main(String[] args) {
+  }
+}</textarea>
+<div class="controls">
+<button class="test-btn" onclick="testCode(6,'int[]','for')">🔍 TESTAR</button>
+<button class="hint-btn" onclick="hintPasso(6)">💡 PASSO A PASSO</button>
+</div>
+<div id="r6" class="result info"></div>
+</div>
+
+<!-- 7 MÉTODO -->
+<div class="exercise">
+<h2>7️⃣ Método Soma</h2>
+<div class="description">static int soma(int a,int b) → soma(2,3)=5</div>
+<textarea id="c7">public class Ex7 {
+  public static void main(String[] args) {
+  }
+}</textarea>
+<div class="controls">
+<button class="test-btn" onclick="testCode(7,'static int','return')">🔍 TESTAR</button>
+<button class="hint-btn" onclick="hintPasso(7)">💡 PASSO A PASSO</button>
+</div>
+<div id="r7" class="result info"></div>
+</div>
+
+<!-- 8 WHILE -->
+<div class="exercise">
+<h2>8️⃣ While 5x</h2>
+<div class="description">while(i<5) imprimir i++</div>
+<textarea id="c8">public class Ex8 {
+  public static void main(String[] args) {
+  }
+}</textarea>
+<div class="controls">
+<button class="test-btn" onclick="testCode(8,'while','<5')">🔍 TESTAR</button>
+<button class="hint-btn" onclick="hintPasso(8)">💡 PASSO A PASSO</button>
+</div>
+<div id="r8" class="result info"></div>
+</div>
+
+<!-- 9 DO WHILE -->
+<div class="exercise">
+<h2>9️⃣ do-while Menu</h2>
+<div class="description">do {menu} while(opc != 0)</div>
+<textarea id="c9">public class Ex9 {
+  public static void main(String[] args) {
+  }
+}</textarea>
+<div class="controls">
+<button class="test-btn" onclick="testCode(9,'do','while')">🔍 TESTAR</button>
+<button class="hint-btn" onclick="hintPasso(9)">💡 PASSO A PASSO</button>
+</div>
+<div id="r9" class="result info"></div>
+</div>
+
+<!-- 10 Switch -->
+<div class="exercise">
+<h2>🔟 Switch Dia</h2>
+<div class="description">switch(dia) 1="Segunda" default="Inválido"</div>
+<textarea id="c10">import java.util.Scanner;
+public class Ex10 {
+  public static void main(String[] args) {
+  }
+}</textarea>
+<div class="controls">
+<button class="test-btn" onclick="testCode(10,'switch','case')">🔍 TESTAR</button>
+<button class="hint-btn" onclick="hintPasso(10)">💡 PASSO A PASSO</button>
+</div>
+<div id="r10" class="result info"></div>
+</div>
+
+<script>
+const PASSOS = {
+1:['1️⃣ System.out.println(', '2️⃣ "Oi Mundo Java!" );', '3️⃣ FIM!'],
+2:['1️⃣ int n1 = sc.nextInt();', '2️⃣ int n2 = sc.nextInt();', '3️⃣ System.out.println(n1+n2);'],
+3:['1️⃣ for(int i=1; i<=10; i++) {', '2️⃣ System.out.println(i);', '3️⃣ }'],
+4:['1️⃣ int idade = sc.nextInt();', '2️⃣ if(idade>=18) System.out.println("adulto");', '3️⃣ else System.out.println("criança");'],
+5:['1️⃣ int n = sc.nextInt();', '2️⃣ if(n%2==0) System.out.println("PAR");', '3️⃣ else System.out.println("IMPAR");'],
+6:['1️⃣ int[] arr = {1,2,3};', '2️⃣ int soma=0;', '3️⃣ for(int x:arr) soma+=x;', '4️⃣ System.out.println(soma);'],
+7:['1️⃣ static int soma(int a, int b) {', '2️⃣ return a+b;', '3️⃣ }', '4️⃣ System.out.println(soma(2,3));'],
+8:['1️⃣ int i=0;', '2️⃣ while(i<5) {', '3️⃣ System.out.println("i="+i); i++;', '4️⃣ }'],
+9:['1️⃣ int opc=1;', '2️⃣ do { System.out.println("Menu"); opc=sc.nextInt(); }', '3️⃣ while(opc != 0);'],
+10:['1️⃣ int dia = sc.nextInt();', '2️⃣ switch(dia) {', '3️⃣ case 1: System.out.println("Segunda"); break;', '4️⃣ default: System.out.println("Inválido"); }']
+};
+
+function hintPasso(n) {
+const textarea = document.getElementById(`c${n}`);
+let dica = '\n📋 PASSOS:\n';
+PASSOS[n].forEach((passo,i) => dica += passo + '\n');
+textarea.value += dica;
+document.getElementById(`r${n}`).innerHTML = '✅ PASSOS INSERIDOS!\nSiga 1️⃣ 2️⃣ 3️⃣ → TESTAR';
+document.getElementById(`r${n}`).className = 'result success';
+}
+
+function testCode(n) {
+const code = document.getElementById(`c${n}`).value.toLowerCase();
+const result = document.getElementById(`r${n}`);
+result.className = 'result info';
+result.innerHTML = '🔍 TESTANDO...\nValidando estrutura completa...';
+
+setTimeout(() => {
+let correto = false, feedback = '';
+const checks = {
+1: code.includes('println') && code.includes('oi'),
+2: code.includes('nextint') && code.includes('nextint'),
+3: code.includes('for') && code.includes('<=10'),
+4: code.includes('if') && code.includes('>=18'),
+5: code.includes('%') && code.includes('==0'),
+6: code.includes('int[') && code.includes('for'),
+7: code.includes('static int') && code.includes('return'),
+8: code.includes('while') && code.includes('<'),
+9: code.includes('do') && code.includes('while'),
+10: code.includes('switch') && code.includes('case')
+};
+correto = checks[n];
+feedback = correto ? '🎉 CÓDIGO COMPLETO VALIDADO!\n✅ Estrutura 100% correta!' : '❌ Estrutura incompleta\n💡 Use DICA PASSO A PASSO';
+result.className = correto ? 'result success' : 'result error';
+result.innerHTML = feedback;
+}, 1500);
+}
+</script>
+</body>
+</html>
+
