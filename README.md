@@ -1,4 +1,4 @@
-# Exercícios Básicos Java Interativo - VERSÃO CONSOLE ✅
+# Exercícios Básicos Java Interativo - VERSÃO CONSOLE 
 
 ## 🎯 Como rodar (Windows):
 ```
@@ -6,7 +6,7 @@ javac *.java
 java Main
 ```
 
-## 📋 Main.java - 10 Exercícios Interativos
+## Main.java - 10 Exercícios Interativos
 - **Menu console** colorido com Scanner.
 - **Validação automática** de código (busca keywords exatas como no web original).
 - **DICA PASSO A PASSO** opcional (insere passos numerados).
